@@ -31,8 +31,6 @@ public class Bano {
     @ManyToOne
     @JoinColumn(name = "ubicacion_id", nullable = false)
     private Ubicacion ubicacion;
-    @ManyToOne
-    @JoinColumn(name = "calificacion_id", nullable = false)
-    private Calificacion calificacion;
+
 
 }
