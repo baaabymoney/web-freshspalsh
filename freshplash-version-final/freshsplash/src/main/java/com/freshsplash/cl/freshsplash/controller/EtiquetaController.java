@@ -71,4 +71,22 @@ public class EtiquetaController {
         etiquetaService.eliminarEtiqueta(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/discapacidad")
+    public ResponseEntity<List<Etiqueta>> obtenerAccesibles() {
+    List<Etiqueta> etiquetas = etiquetaService.obtenerEtiquetasAccesoDiscapacitado();
+    if (etiquetas.isEmpty()) {
+        return ResponseEntity.noContent().build();
+    }
+    return ResponseEntity.ok(etiquetas);
+}
+
+    @GetMapping("/gratuitas")
+    public ResponseEntity<List<Etiqueta>> obtenerGratuitas() {
+    List<Etiqueta> etiquetas = etiquetaService.obtenerEtiquetasGratuitas();
+    if (etiquetas.isEmpty()) {
+        return ResponseEntity.noContent().build();
+    }
+    return ResponseEntity.ok(etiquetas);
+}
 }

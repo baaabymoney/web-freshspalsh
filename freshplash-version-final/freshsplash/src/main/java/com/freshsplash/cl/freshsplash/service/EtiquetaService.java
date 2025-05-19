@@ -64,4 +64,11 @@ public class EtiquetaService {
         }
     }
 
+    public List<Etiqueta> obtenerEtiquetasAccesoDiscapacitado() {
+        return etiquetaRepository.findEtiquetasAccesoDiscapacitado();
+    }
+
+    public List<Etiqueta> obtenerEtiquetasGratuitas() {
+        return etiquetaRepository.findEtiquetasGratuitas();
+    }
 }
